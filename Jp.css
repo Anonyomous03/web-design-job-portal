@@ -21,7 +21,7 @@ and open the template in the editor.
     height: 60px;
     background-color: bisque;
     box-shadow: 0px 0px 5px 5px black;
-    padding: 0px 30px;
+    padding: 0px 20px;
     line-height: 60px;
     position: fixed;
     z-index: 100;
@@ -36,6 +36,7 @@ and open the template in the editor.
     text-decoration: none;
     font-size: 30px;
     font-weight: bold;
+    /*margin-left: 40px;*/
 }
 .right_ul
 {
@@ -104,6 +105,8 @@ and open the template in the editor.
 .web-desc
 {
     padding: 30px 0px;
+    border-style: solid;
+    border-color: black;
 }
 .container
 {
@@ -125,14 +128,24 @@ and open the template in the editor.
     margin-top: 20px;
     text-align: center;
 }
+
 .row
 {
     width: 100%;
+}
+.row::after
+{
+    clear: both;
+    content: "";
+    display: table;
 }
 .col-6
 {
     width: 50%;
     float: left;
+    border-style:solid;
+    border-color: black;
+    border-width: 2px 0px;
 }
 .intro-img 
 {
@@ -188,4 +201,90 @@ and open the template in the editor.
 .forms a:hover
 {
     font-weight: bold;
+}
+
+.services
+{
+    margin: 10px 0px;
+    
+}
+.col-3
+{
+    width: 25%;
+    float: left;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color: orange;
+    color: floralwhite;
+}
+.heading h1
+{
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: blue;
+    width: 100%;
+    height: 30px;
+    color: white;
+}
+.service-heading:hover
+{
+    display: block;
+    background-color: gold;
+    color: black;
+}
+.toggle
+{
+    position: fixed;
+    z-index: 20;
+    font-size: 40px;
+    display: none;
+}
+@media screen and (max-width:760px)
+{
+    .nav1
+    {
+        padding: 0px 0px;
+        height: 60px;
+    }
+    .toggle
+    {
+        display: block;
+        border: 1px solid black;
+        line-height: 40px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .left_ul li
+    {
+        float: none;
+        text-align: center;
+    }
+    .right_ul
+    {
+        float: none;
+    }
+    .right_ul li
+    {
+        float: none;
+        background-color: bisque;
+    }
+    .right_ul li a
+    {
+        padding: 0px 0px;
+        width: 100%;
+        
+    }
+    .col-3
+    {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .col-6
+    {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
 }
